@@ -13,8 +13,8 @@ $page_id = isset($_GET['page']) ? $_GET['page'] : 1; // if funkcijos sutrumpinim
 $db = new DB();
 $result = $db->query("SELECT * FROM pages WHERE id = '1'");
 
-$title = $result[0]['title'];
-$body = $result[0]['body'];
+$title = $result->title;
+$body = $result->body;
 
 
 
