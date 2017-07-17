@@ -24,7 +24,7 @@ class DB {
 		$query = $this->conn->query($sql);
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_ASSOC);
-		$result = $query->fetchAll();
+		$result = $query->fetchObject();
 		return $result;
 
 	}
