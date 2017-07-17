@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Portfolio</title>
+	<title>Portfolio - <?= $page->title; ?></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 <body>
 	<div class= "container">
 		<div class= "row">
-			<h1><?=$title; ?></h1>
+			<h1><?=$page->title; ?></h1>
 		</div>
 		<div class="row">
-			<p>Body</p>
+			<p><?=$page->body; ?></p>
 		</div>
 	</div>
 
