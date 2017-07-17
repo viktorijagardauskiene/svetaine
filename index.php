@@ -1,6 +1,4 @@
 <pre>
 <?php
-include 'db.php';
+include 'classes/db.php';
 
-$db = new DB();
-print_r($db->query("SELECT * FROM pages"));
