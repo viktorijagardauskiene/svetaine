@@ -23,6 +23,7 @@ class DB {
 	public function query($sql) {
 		$query = $this->conn->query($sql);
 		$query->execute();
+		$query->setFetchMode(PDO::FETCH_ASSOC);
 		$result = $query->fetchAll();
 		return $result;
 
