@@ -1,6 +1,7 @@
 
 <?php
 include 'classes/db.php';
+include 'classes/pages.php';
 
 $page_id = isset($_GET['page']) ? $_GET['page'] : 1; // if funkcijos sutrumpinimas
 
