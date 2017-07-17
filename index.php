@@ -1,5 +1,5 @@
 
-<pre>
+
 <?php
 include 'classes/db.php';
 include 'classes/pages.php';

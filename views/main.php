@@ -12,7 +12,7 @@
 		<div class="row">
 		<?php
 			foreach ($menu as $link) {
-				echo '<a href="">#</a>';
+				echo '<a class="btn btn-small btn-warning" href="?page='.$link->id.'">'.$link->title.'</a>';
 			}
 		?>
 		</div>
