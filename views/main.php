@@ -10,6 +10,13 @@
 			<h1><?=$page->title; ?></h1>
 		</div>
 		<div class="row">
+		<?php
+			foreach ($menu as $link) {
+				echo '<a href="">#</a>';
+			}
+		?>
+		</div>
+		<div class="row">
 			<p><?=$page->body; ?></p>
 		</div>
 	</div>
