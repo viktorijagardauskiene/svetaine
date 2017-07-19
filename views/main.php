@@ -42,6 +42,7 @@
 							<form method="POST" action="">
 							<button type="submit" name="logout" value="logout">logout</button>			
 						</form>';}
+						echo $user->error; // jei suvedi bloga slaptazodi
 		?>
 			</div>
 			

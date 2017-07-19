@@ -4,6 +4,7 @@ class Users {
 
 	public $username = "Guest";
 	public $level = "Guest";
+	public $error;
 
 	function __construct() {
 		if (isset($_SESSION['username']) && $_SESSION['username'] != Null) { // patikrina ar vartotojas jau yra prisijunges
@@ -24,6 +25,8 @@ class Users {
 				$this->username = $_SESSION['username'];
 				$this->level = $_SESSION['level'];
 
+			} else {
+				$this->error = "Wrong password";
 			}
 		}
 	}
