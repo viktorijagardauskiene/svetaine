@@ -8,7 +8,7 @@
 	<div class= "container">
 		<div class= "row">
 			<div class="col-md-6"><h1><?=$config->site_name; ?></h1></div>
-			<div class="col-md-6 text-right"><?= $user->username; ?></div>
+			<div class="col-md-6 text-right"><?= $user->username; ?> | <?= $user->level; ?></div>
 			
 		</div>
 		<div class="row">
