@@ -19,7 +19,10 @@
 		?>
 		</div>
 		<div class="row">
-			<div class="col-md-9"><?=$page->body; ?></div>
+			<div class="col-md-9">
+				<h2><?=$page->title; ?></h2>
+				<?=$page->body; ?>
+			</div>
 			<div calss="col-md-3">
 				<h2>Banners</h2>
 				<?php
