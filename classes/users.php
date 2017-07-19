@@ -26,10 +26,10 @@ class Users {
 				$this->level = $_SESSION['level'];
 
 			} else {
-				$this->error = "Wrong password";
+				$this->error = "Wrong username or password";
 			}
 		} else {
-			$this->error = "User not found";
+			$this->error = "Wrong username or password";
 		}
 	}
 
