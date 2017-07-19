@@ -9,7 +9,7 @@ class Pages {
 
 	public static function getMenu() {
 		$db = new DB();
-		$menu = $db->query("SELECT id, title FROM pages");
+		$menu = $db->query("SELECT * FROM pages");
 		return $menu;
 	}
 
