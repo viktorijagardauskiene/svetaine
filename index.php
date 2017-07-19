@@ -3,10 +3,13 @@
 <?php
 session_start();
 
+include 'classes/config.php';
 include 'classes/db.php';
 include 'classes/pages.php';
 include 'classes/banners.php';
 include 'classes/users.php';
+
+$config = Classes::getConfig();
 
 $page_id = isset($_GET['page']) ? $_GET['page'] : 1; 
 
