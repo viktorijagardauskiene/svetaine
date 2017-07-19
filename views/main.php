@@ -17,7 +17,21 @@
 		?>
 		</div>
 		<div class="row">
-			<p><?=$page->body; ?></p>
+			<div class="col-md-9"><?=$page->body; ?></div>
+			<div calss="col-md-3">
+				<?php
+			foreach ($banners as $banner) {
+				if ($banner->img != Null) {
+					echo '<a href="'.$banner->link.'"><img alt="images/'.$banner->title.'" src="'.$banner->img'"</a><br />';
+				} else {
+					echo '<a href="'.$banner->link.'">'.$banner->title.'</a><br />';
+				}
+				
+			}
+		?>
+
+			</div>
+			
 		</div>
 	</div>
 
