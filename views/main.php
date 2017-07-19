@@ -7,7 +7,9 @@
 <body>
 	<div class= "container">
 		<div class= "row">
-			<h1><?=$page->title; ?></h1>
+			<div class="col-md-6"><h1><?=$page->title; ?></h1></div>
+			<div class="col-md-6 text-right"><?= $user->username; ?></div>
+			
 		</div>
 		<div class="row">
 		<?php
@@ -19,16 +21,28 @@
 		<div class="row">
 			<div class="col-md-9"><?=$page->body; ?></div>
 			<div calss="col-md-3">
+				<h2>Banners</h2>
 				<?php
-			foreach ($banners as $banner) {
-				if ($banner->img != Null) {
-					echo '<a href="'.$banner->link.'"><img alt="images/'.$banner->title.'" src="'.$banner->img'"</a><br />';
-				} else {
-					echo '<a href="'.$banner->link.'">'.$banner->title.'</a><br />';
-				}
+			//foreach ($banners as $banner) {
+				//if ($banner->img != Null) {
+				//	echo '<a href="'.$banner->link.'"><img alt="images/"'.$banner->title.'" src="'.$banner->img'"</a><br />';
+				//} else {
+				//	echo '<a href="'.$banner->link.'">"'.$banner->title.'"</a><br />';
+				//}
 				
-			}
+			//}
 		?>
+			<h2>Login</h2>
+			<form method="POST" action="">
+				<input class="form-control" type="text" name="username" required>
+				<input class="form-control" type="password" name="password" required>
+				<button class="btn btn-default" type="submit">Login</button>
+			</form>
+			<h2>Logout</h2>
+			<form method="POST" action="">
+				<button type="submit" name="logout">Logout</button>
+				
+			</form>
 
 			</div>
 			
