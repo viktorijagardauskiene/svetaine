@@ -1,9 +1,9 @@
 <?php
 class Pages {
 
-	public static function getSinglePage($id) {
+	public static function getSinglePage($slug) {
 		$db = new DB();
-		$page = $db->query("SELECT * FROM pages WHERE id = '$id'");
+		$page = $db->query("SELECT * FROM pages WHERE slug = '$slug'");
 		return $page[0];
 	}
 

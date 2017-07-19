@@ -11,9 +11,13 @@ include 'classes/users.php';
 
 $config = Config::getConfig();
 
-$page_id = isset($_GET['page']) ? $_GET['page'] : 1; 
+if (isset($_GET['page']) && $_GET['page'] != null) {
+	$page_slug = $_GET['page'];
+} else {
+	$page_slug = "home";
+}
 
-$page = Pages::getSinglePage($page_id);
+$page = Pages::getSinglePage($page_slug);
 $menu = Pages::getMenu();
 $banners = Banners::getBanners();
 
