@@ -21,14 +21,18 @@ class Users {
 				// vartotojo slaptazodis tinka
 				$_SESSION['username'] = $userRecord[0]->username;
 				$_SESSION['level'] = $userRecord[0]->level;
+				$this->username = $_SESSION['username'];
+				$this->level = $_SESSION['level'];
 
 			}
 		}
 	}
 
 	public function logout() {
-		unset($_SESSION);
-		// session_destroy();
+		//unset($_SESSION);
+		$this->username = "Guest";
+		$this->level = "Guest";
+		session_destroy();
 	}
 
 }

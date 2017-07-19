@@ -40,7 +40,7 @@
 			</form>
 			<h2>Logout</h2>
 			<form method="POST" action="">
-				<button type="submit" name="logout">Logout</button>
+				<button type="submit" name="logout" value="logout">Logout</button>
 				
 			</form>
 

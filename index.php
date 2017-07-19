@@ -22,5 +22,10 @@ if (isset($_POST['username']) && $_POST['username'] != null) {
 	$user->login($_POST['username'], $_POST['password']);
 }
 
+if (isset($_POST['logout']) && $_POST['logout'] !=null) {
+	//bandoma atsijungti
+	$user->logout();
+}
+
 
 include 'views/main.php';
