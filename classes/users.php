@@ -28,6 +28,8 @@ class Users {
 			} else {
 				$this->error = "Wrong password";
 			}
+		} else {
+			$this->error = "User not found";
 		}
 	}
 
