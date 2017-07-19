@@ -42,7 +42,10 @@
 							<form method="POST" action="">
 							<button type="submit" name="logout" value="logout">logout</button>			
 						</form>';}
-						echo $user->error; // jei suvedi bloga slaptazodi
+
+						if ($user->error != null) {
+							echo '<div class="alert alert-danger" role="alert">'.$user->error.'</div>';
+						}
 		?>
 			</div>
 			
