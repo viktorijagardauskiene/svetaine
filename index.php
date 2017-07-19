@@ -34,5 +34,9 @@ if (isset($_POST['logout']) && $_POST['logout'] !=null) {
 	$user->logout();
 }
 
+if ($user->level == "admin") {
+	include 'views/admin.php';
+} else {
 
 include 'views/main.php';
+}
