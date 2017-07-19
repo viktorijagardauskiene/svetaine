@@ -31,19 +31,18 @@
 				//}
 				
 			//}
+		if ($user->level=="Guest") {
+						echo '<h2>Login</h2>
+						<form method="POST" action="">
+							<input class="form-control" type="text" name="username" required>
+							<input class="form-control" type="password" name="password" required>
+							<button class="btn btn-default" type="submit">Login</button>
+						</form>';} else {
+							echo '<h2>Logout</h2>
+							<form method="POST" action="">
+							<button type="submit" name="logout" value="logout">logout</button>			
+						</form>';}
 		?>
-			<h2>Login</h2>
-			<form method="POST" action="">
-				<input class="form-control" type="text" name="username" required>
-				<input class="form-control" type="password" name="password" required>
-				<button class="btn btn-default" type="submit">Login</button>
-			</form>
-			<h2>Logout</h2>
-			<form method="POST" action="">
-				<button type="submit" name="logout" value="logout">Logout</button>
-				
-			</form>
-
 			</div>
 			
 		</div>
