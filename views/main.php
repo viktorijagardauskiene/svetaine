@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Portfolio - <?= $page->title; ?></title>
+	<title><?= $config->site_name; ?> | <?= $page->title; ?></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 <body>
 	<div class= "container">
 		<div class= "row">
-			<div class="col-md-6"><h1><?=$page->title; ?></h1></div>
+			<div class="col-md-6"><h1><?=$config->site_name; ?></h1></div>
 			<div class="col-md-6 text-right"><?= $user->username; ?></div>
 			
 		</div>

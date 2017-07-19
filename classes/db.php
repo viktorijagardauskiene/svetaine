@@ -9,7 +9,7 @@ class DB {
 	//prisijungiam prie db
 	function __construct() {
 		try {
-			    $this->conn = new PDO("mysql:host=$this->db_hostname;dbname=$this->db", $this->db_username, $this->db_password);
+			    $this->conn = new PDO("mysql:host=$this->db_hostname;dbname=$this->db;charset=utf8", $this->db_username, $this->db_password);
 			    // set the PDO error mode to exception
 			   $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			   //echo "Connected successfully";

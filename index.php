@@ -9,7 +9,7 @@ include 'classes/pages.php';
 include 'classes/banners.php';
 include 'classes/users.php';
 
-$config = Classes::getConfig();
+$config = Config::getConfig();
 
 $page_id = isset($_GET['page']) ? $_GET['page'] : 1; 
 
