@@ -25,3 +25,4 @@ class Pages {
 	}
 
 } 
+// namu darbams pasidaryti puslapio redagavima
