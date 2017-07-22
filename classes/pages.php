@@ -20,6 +20,13 @@ class Pages {
 		die();
 	}
 
+	public static function createPage($slug, $title, $body) {
+		$db = new DB();
+		$update = $db->store("INSERT INTO pages (slug, title, body) VALUES ('$slug', '$title', '$body')");
+		header('Location: http://localhost/viktorijag/svetaine');
+		die();
+	}
+
 	public static function getMenu() {
 		$db = new DB();
 		$menu = $db->query("SELECT * FROM pages");

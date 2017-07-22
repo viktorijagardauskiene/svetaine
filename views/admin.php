@@ -19,6 +19,7 @@
 				echo '<a class="btn btn-small btn-warning" href="'.$link->slug.'">'.$link->title.'</a>&nbsp';
 			}
 		?>
+		<a href="http://localhost/viktorijag/svetaine?add" class="btn btn-small btn-success">+</a>
 		</div>
 		<div class="row">
 			<div class="col-md-9">
