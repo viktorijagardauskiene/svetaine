@@ -33,6 +33,13 @@ class DB {
 
 	}
 
+	public function store($sql) {
+		$query = $this->conn->query($sql);
+		$response = $query->execute();
+		return $response;
+		
+	}
+
 
 
 

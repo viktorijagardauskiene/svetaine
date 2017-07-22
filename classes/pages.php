@@ -6,16 +6,18 @@ class Pages {
 		$page = $db->query("SELECT * FROM pages WHERE slug = '$slug'");
 		if ($page != null) {
 		return $page[0];
-	} else {
-		echo "<h1>Page not found</h1>";
-		die();
-	}
+		} else {
+			echo "<h1>Page not found</h1>";
+			die();
+		}
 	}
 
-	public static function getPage($id, $title, $slug, $body) {
+	
+	public static function updatePage($id, $slug, $title, $body) {
 		$db = new DB();
-		$page = $db->query("update table"); // namu darbai
-		
+		$db->store("UPDATE pages SET slug='$slug', title='$title', body='$body' WHERE id='$id'");
+		header('Location: http://localhost/viktorijag/svetaine');
+		die();
 	}
 
 	public static function getMenu() {

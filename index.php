@@ -34,6 +34,11 @@ if (isset($_POST['logout']) && $_POST['logout'] !=null) {
 	$user->logout();
 }
 
+if (isset($_POST['title']) && $_POST['title'] !=null) {
+	//bandoma atnaujinti puslapi
+	Pages::updatePage($_POST['id'], $_POST['slug'], $_POST['title'], $_POST['body']);
+}
+
 if ($user->level == "admin") {
 	include 'views/admin.php';
 } else {

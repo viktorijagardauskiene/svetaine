@@ -3,6 +3,7 @@
 <head>
 	<title><?= $config->site_name; ?> | <?= $page->title; ?></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
 </head>
 <body>
 	<div class= "container">
@@ -21,8 +22,20 @@
 		</div>
 		<div class="row">
 			<div class="col-md-9">
-				<h2><?=$page->title; ?></h2>
-				<?=$page->body; ?>
+					<form action="" method="POST">
+						<input hidden="true" name="id" value="<?= $page->id; ?>">
+						<p>Page Title</p>
+						<input class="form-control" type="text" name="title" value="<?= $page->title ?>">
+						<p>Page slug</p>
+						<input class="form-control" type="text" name="slug" value="<?= $page->slug ?>">
+						<p>Page Body</p>
+						<textarea class="form-control" type="text" name="body"><?= $page->body ?></textarea> <!-- CKeditor -->
+ 						<button class="btn btn-default" action="submit">Save</button>
+
+					</form>
+					<script>
+           				 CKEDITOR.replace('body');
+       	 			</script>
 			</div>
 			<div calss="col-md-3">
 				<h2>Banners</h2>
@@ -63,5 +76,6 @@
 		</div>
 	</div>
 
+	
 </body>
 </html>
